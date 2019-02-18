@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Auxil from '../../../hoc/auxil';
+import Auxil from '../../../hoc/Auxil/auxil';
+import Button from '../../UI/Button/Button';
 
 const OrderSummary = (props) => {
 	const ingredientSummary = Object.keys(props.ingredients).map(item => {
-		return <li key={item}><span style={{ textTransform: 'capitalize' }}>item</span>: {props.ingredients[item]}</li>
+		return <li key={item}><span style={{ textTransform: 'capitalize' }}>{item}</span>: {props.ingredients[item]}</li>
 	})
 	return (
 		<Auxil>
@@ -13,7 +14,10 @@ const OrderSummary = (props) => {
 			<ul>
 				{ingredientSummary}
 			</ul>
+			<p>Total Price: <strong>{props.totalPrice.toFixed(2)}</strong></p>
 			<p>Continue to checkout?</p>
+			<Button btnType="Danger" clicked={props.purchaseCancelled}>Cancel</Button>
+			<Button btnType="Success" clicked={props.purchaseContinued}>Continue</Button>
 		</Auxil>
 	);
 }
