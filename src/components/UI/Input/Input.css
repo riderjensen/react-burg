@@ -1,4 +1,4 @@
-.Input{
+.Input {
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
@@ -19,10 +19,15 @@
 	width: 100%;
 	display: block;
 	box-sizing: border-box;
-
+	border-radius: 4px;
 }
 
-.InputElement:focus{
+.InputElement:focus {
 	outline: none;
 	background-color: #ccc;
+}
+
+.Invalid {
+	border: 1px solid red;
+	background-color: rgb(230, 184, 184);
 }
