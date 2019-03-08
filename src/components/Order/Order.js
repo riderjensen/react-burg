@@ -15,7 +15,7 @@ const Order = (props) => {
 		return <span style={{
 			textTransform: 'capitalize',
 			display: 'inline-block',
-			padding: '10px;',
+			padding: '10px',
 			margin: '10px',
 			border: '1px solid #ccc',
 		}} key={ig.name}>{ig.name} ({ig.amount})</span>
