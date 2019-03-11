@@ -7,7 +7,8 @@
     font: inherit;
     padding: 10px;
     margin: 10px;
-    font-weight: bold;
+	font-weight: bold;
+	background-color: burlywood;
 }
 
 .Button:disabled {
