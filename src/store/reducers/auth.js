@@ -28,6 +28,7 @@ const authFail = (state, action) => {
 }
 
 const authLogOut = (state, action) => {
+	// logout broken, unsure why
 	return updateObject(state, { idToken: null, userId: null })
 }
 
